@@ -1,8 +1,8 @@
 {
-  "name": "vizceral-example",
-  "version": "4.3.0",
-  "description": "Vizceral example app",
-  "author": "Justin Reynolds <jreynolds@netflix.com>",
+  "name": "visual",
+  "version": "1.0.0",
+  "description": "Transactions visual",
+  "author": "Nurseiit Abdimomyn <nurs@unist.ac.kr>",
   "scripts": {
     "clean": "rimraf dist && mkdirp dist",
     "lint": "eslint src --ext .js --ext .jsx --fix",
@@ -10,11 +10,8 @@
     "copy:json": "cpx \"./src/*.json\" ./dist",
     "dev-server": "webpack-dev-server --host=0.0.0.0 --content-base dist/ --history-api-fallback --color",
     "dev": "npm-run-all clean --parallel copy:* dev-server",
-    "validate": "npm ls"
-  },
-  "engines": {
-    "node": "~4.4.0"
-  },
+    "validate": "yarn list"
+  }, 
   "license": "Apache-2.0",
   "dependencies": {
     "@tweenjs/tween.js": "^16.8.0",
@@ -65,11 +62,7 @@
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Netflix/vizceral-example.git"
-  },
+  }, 
   "pre-commit": [
     "lint",
     "test"
