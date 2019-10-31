@@ -1,0 +1,54 @@
+{
+  "renderer": "region",
+  "name": "transactions",
+  "displayName": "Transactions, Nov. 2018 – Nov. 2019",
+  "updated": 1477690448572,
+  "nodes": [  
+    {
+      "name": "infectivities",
+      "metadata": {
+        "streaming": 1
+      }, 
+      "renderer": "focusedChild"
+    },  
+    {
+      "name": "salvability",
+      "metadata": {
+        "streaming": 1
+      }, 
+      "renderer": "focusedChild"
+    },
+    {
+      "name": "accounts",
+      "metadata": {
+        "streaming": 1
+      }, 
+      "renderer": "focusedChild"
+    }
+  ],
+  "connections": [ 
+    {
+      "source": "accounts",
+      "target": "salvability",
+      "metadata": {
+        "streaming": 1
+      },
+      "metrics": {
+        "normal": 100
+      }
+    },
+    {
+      "source": "accounts",
+      "target": "infectivities",
+      "metadata": {
+        "streaming": 1
+      },
+      "metrics": {
+        "normal": 50
+      }
+    } 
+  ],
+  "metadata": {},
+  "class": "normal",
+  "serverUpdateTime": 1477691777441
+}
