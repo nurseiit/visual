@@ -66,8 +66,8 @@ class TrafficFlow extends React.Component {
       filters: filterStore.getFiltersArray(),
       searchTerm: '',
       matches: {
-        total: -1,
-        visible: -1
+        total: 70,
+        visible: 70
       },
       trafficData: {
         nodes: [],
@@ -100,6 +100,7 @@ class TrafficFlow extends React.Component {
   }
 
   viewChanged = (data) => {
+    console.log('Updating: ', data);
     const changedState = {
       currentView: data.view,
       searchTerm: '',
