@@ -1,6 +1,9 @@
 # System
 .DS_Store
 
+# Jupyter
+**/.ipynb_checkpoints/
+
 # IDE config
 /.idea
 
