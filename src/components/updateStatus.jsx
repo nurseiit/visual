@@ -59,7 +59,7 @@ class UpdateStatus extends React.Component {
   }
 
   render () {
-    const freshData = _.every(this.state.status, status => status.fresh);
+    const freshData = _.every(this.state.status, (status) => status.fresh);
     const glyphClass = `glyphicon glyphicon-refresh ${freshData ? 'severity0' : 'severity1'}`;
     const now = Date.now();
 
@@ -69,7 +69,7 @@ class UpdateStatus extends React.Component {
         <table className="table table-condensed table-borderless">
           <tbody>
             {
-              this.props.status.map(status => (
+              this.props.status.map((status) => (
                 <tr key={status.region}>
                   <td>{status.region}:</td>
                   <td><span className={status.fresh ? 'severity0' : 'severity1'}>{ msToTimeAgo(now - status.updated) }</span></td>

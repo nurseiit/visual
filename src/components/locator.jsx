@@ -39,14 +39,14 @@ class Locator extends React.Component {
 
     return (
       <div style={style}>
-        <div style={listStyle}>{totalServices} services / {filteredServices} filtered &nbsp;
+        <div style={listStyle}>{totalServices} users / {filteredServices} filtered &nbsp;
           { filteredServices > 0
             ? <span className="clickable" onClick={this.clearFilterClicked.bind(this)}>(show)</span>
             : undefined
           }
         </div>
         <div style={style}>
-          <input type="search" className="form-control locator-input" placeholder="Locate Service" onChange={(event) => { this.locatorChanged(event.currentTarget.value); }} value={this.props.searchTerm} />
+          <input type="search" className="form-control locator-input" placeholder="Locate Users" onChange={(event) => { this.locatorChanged(event.currentTarget.value); }} value={this.props.searchTerm} />
           <span className="glyphicon glyphicon-search form-control-feedback" style={{ height: '24px', lineHeight: '24px' }}></span>
         </div>
       </div>

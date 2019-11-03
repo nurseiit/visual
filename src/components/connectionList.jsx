@@ -9,7 +9,7 @@ import 'react-virtualized/styles.css';
 
 const nameRenderer = function (data) {
   let className = 'glyphicon glyphicon-warning-sign';
-  const mostSevereNotice = data.rowData.notices && data.rowData.notices.length > 0 && _.maxBy(data.rowData.notices, notice => notice.severity);
+  const mostSevereNotice = data.rowData.notices && data.rowData.notices.length > 0 && _.maxBy(data.rowData.notices, (notice) => notice.severity);
   if (mostSevereNotice) {
     className += ` severity${mostSevereNotice.severity}`;
   }
