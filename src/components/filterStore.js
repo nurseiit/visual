@@ -97,7 +97,7 @@ class FilterStore extends EventEmitter {
   }
 
   getFiltersArray () {
-    return _.map(store.filters, (filter) => _.clone(filter));
+    return _.map(store.filters, filter => _.clone(filter));
   }
 
   getStates () {
@@ -105,13 +105,13 @@ class FilterStore extends EventEmitter {
   }
 
   getChangedFilters () {
-    return _.filter(store.filters, (filter) => filter.value !== defaultFilters[filter.name].value);
+    return _.filter(store.filters, filter => filter.value !== defaultFilters[filter.name].value);
   }
 
   getStepFromValue (name) {
-    const index = _.findIndex(store.states[name], (step) => step.value === store.filters[name].value);
+    const index = _.findIndex(store.states[name], step => step.value === store.filters[name].value);
     if (index === -1) {
-      return _.findIndex(store.states[name], (step) => step.value === defaultFilters[name].value);
+      return _.findIndex(store.states[name], step => step.value === defaultFilters[name].value);
     }
     return index;
   }
@@ -123,11 +123,11 @@ class FilterStore extends EventEmitter {
   }
 
   isDefault () {
-    return _.every(store.filters, (filter) => filter.value === defaultFilters[filter.name].value);
+    return _.every(store.filters, filter => filter.value === defaultFilters[filter.name].value);
   }
 
   isClear () {
-    return _.every(store.filters, (filter) => filter.value === noFilters[filter.name].value);
+    return _.every(store.filters, filter => filter.value === noFilters[filter.name].value);
   }
 }
 

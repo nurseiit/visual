@@ -30,11 +30,11 @@ class DisplayOptions extends React.Component {
     return (
       <div>
         <div>
-          <input type="checkbox" id="allowDraggingOfNodes" checked={allowDraggingOfNodes} onChange={(event) => this._onCheckBoxChanged(event)}/>
+          <input type="checkbox" id="allowDraggingOfNodes" checked={allowDraggingOfNodes} onChange={event => this._onCheckBoxChanged(event)}/>
           <label htmlFor="allowDraggingOfNodes">Allow dragging nodes</label>
         </div>
         <div>
-          <input id="showLabels" type="checkbox" checked={showLabels} onChange={(event) => this._onCheckBoxChanged(event)}/>
+          <input id="showLabels" type="checkbox" checked={showLabels} onChange={event => this._onCheckBoxChanged(event)}/>
           <label htmlFor="showLabels">Show Labels</label>
         </div>
       </div>

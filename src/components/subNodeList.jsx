@@ -72,7 +72,7 @@ class SubNodeList extends React.Component {
     };
 
 
-    this.linkRenderer = (data) => (data.rowData.app ? (
+    this.linkRenderer = data => (data.rowData.app ? (
       <OverlayTrigger trigger="click" rootClose placement="bottom" overlay={this.linkPopover({ app: data.rowData.app, name: data.rowData.name })}>
         <div className={data.rowData.className} style={{ display: 'inline-block', cursor: 'pointer' }}><span className="glyphicon glyphicon-share"></span></div>
       </OverlayTrigger>
@@ -89,7 +89,7 @@ class SubNodeList extends React.Component {
     const headerHeight = 30;
     let estimatedRowHeight = 25;
     const maxTableHeight = 300;
-    const trafficTotal = _.sum(_.flatten(_.map(this.state.nodes, (c) => _.values(c.metrics))));
+    const trafficTotal = _.sum(_.flatten(_.map(this.state.nodes, c => _.values(c.metrics))));
     const nodeRows = _.map(this.state.nodes, (node) => {
       const total = _.sum(_.values(node.metrics));
       const totalPercent = total / trafficTotal;
