@@ -4206,10 +4206,10 @@ keymirror@^0.1.1:
   resolved "https://registry.yarnpkg.com/keymirror/-/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
   integrity sha1-kYiJ6hP40KQufFVyUO7nE63JXDU=
 
-keypress.js@2.1.0-1:
-  version "2.1.0-1"
-  resolved "https://registry.yarnpkg.com/keypress.js/-/keypress.js-2.1.0-1.tgz#8ec77647bc119c9f611f5a749068ce95e82df307"
-  integrity sha1-jsd2R7wRnJ9hH1p0kGjOlegt8wc=
+keypress.js@2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/keypress.js/-/keypress.js-2.1.5.tgz#38f96d1ded85f56115a0cafd9908e727bcd1b348"
+  integrity sha512-PQpeWxG6vNuTT0Gq20LyAzqSpeBWtQ6DTYIJB7JMJEetgF730Om9e6y82GdEv06o1iaJiH1hh2JpSOXK3zIAdA==
 
 killable@^1.0.1:
   version "1.0.1"
